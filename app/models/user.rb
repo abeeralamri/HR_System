@@ -12,4 +12,7 @@ class User < ApplicationRecord
      def send_welcome_email      
           UserMailer.send_welcome_email(self).deliver    
      end 
+
+     ## profile picture
+     has_one_attached :profile_pic
 end

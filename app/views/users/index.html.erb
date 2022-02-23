@@ -25,6 +25,8 @@
         <td><%= user.password %></td>
         <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_user_path(user) %></button>  </td>
         <td><%= button_to "Delete", user, method: :delete, class: "btn btn-danger"%></td>
+        <td><button class =  "btn btn-primary"><%= link_to "Show", user, style: "color:white;" %></button>  </td>
+
       </tr>
     <% end %>
   </tbody>

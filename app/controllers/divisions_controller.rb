@@ -9,6 +9,7 @@ class DivisionsController < ApplicationController
   # GET /divisions/1 or /divisions/1.json
   def show
   end
+  
 
   # GET /divisions/new
   def new
@@ -22,7 +23,7 @@ class DivisionsController < ApplicationController
   # POST /divisions or /divisions.json
   def create
     @division = Division.new(division_params)
-
+    
     respond_to do |format|
       if @division.save
         format.html { redirect_to division_url(@division), notice: "Division was successfully created." }
@@ -38,7 +39,7 @@ class DivisionsController < ApplicationController
   def update
     respond_to do |format|
       if @division.update(division_params)
-        format.html { redirect_to division_url(@division), notice: "Division was successfully updated." }
+        format.html { redirect_to "/divisions", notice: "Division was successfully updated." }
         format.json { render :show, status: :ok, location: @division }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class DivisionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def division_params
-      params.require(:division).permit(:name, :description, :d_team, :manager)
+      params.require(:division).permit(:name, :description, :manager, :team)
     end
 end

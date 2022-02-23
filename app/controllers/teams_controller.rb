@@ -13,6 +13,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   def new
     @team = Team.new
+
   end
 
   # GET /teams/1/edit
@@ -38,7 +39,7 @@ class TeamsController < ApplicationController
   def update
     respond_to do |format|
       if @team.update(team_params)
-        format.html { redirect_to team_url(@team), notice: "Team was successfully updated." }
+        format.html { redirect_to "/teams", notice: "Team was successfully updated." }
         format.json { render :show, status: :ok, location: @team }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class TeamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def team_params
-      params.require(:team).permit(:name, :description, :members, :team_lead)
+      params.require(:team).permit(:name, :description, :members, :team_lead, :division_id)
     end
 end

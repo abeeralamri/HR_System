@@ -4,6 +4,7 @@ class TargetsController < ApplicationController
   # GET /targets or /targets.json
   def index
     @targets = Target.all
+    
   end
 
   # GET /targets/1 or /targets/1.json
@@ -38,7 +39,7 @@ class TargetsController < ApplicationController
   def update
     respond_to do |format|
       if @target.update(target_params)
-        format.html { redirect_to target_url(@target), notice: "Target was successfully updated." }
+        format.html { redirect_to "/targets", notice: "Target was successfully updated." }
         format.json { render :show, status: :ok, location: @target }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class TargetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def target_params
-      params.require(:target).permit(:title, :description, :start_date, :finish_date, :t_team, :status)
+      params.require(:target).permit(:title, :description, :start_date, :finish_date, :status, :team_id)
     end
 end

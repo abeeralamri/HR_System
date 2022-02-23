@@ -22,13 +22,21 @@
   </div>
 
   <div>
+    <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :members, style: "display: block" %>
-    <%= form.text_field :members %>
+    <%= form.select(:members, options_for_select(all_emp), include_blank: true) %>
   </div>
 
   <div>
+    <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :team_lead, style: "display: block" %>
-    <%= form.text_field :team_lead %>
+    <%= form.select(:team_lead, options_for_select(all_emp), include_blank: true) %>
+  </div>
+
+   <div>
+   
+    <%= form.label :division_id, style: "display: block" %>
+        <%= form.collection_select :division_id, Division.all, :id, :name, include_blank: true %>
   </div>
 
   <div>

@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def login
+  end
   # GET /users/1 or /users/1.json
   def show
   end
@@ -25,7 +27,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
+        format.html { redirect_to "/users", notice: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }

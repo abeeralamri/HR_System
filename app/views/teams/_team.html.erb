@@ -1,22 +1,35 @@
-<div id="<%= dom_id team %>">
-  <p>
+
     <strong>Name:</strong>
     <%= team.name %>
-  </p>
-
-  <p>
+    <br>
+    <br>
+    
     <strong>Description:</strong>
     <%= team.description %>
-  </p>
-
-  <p>
-    <strong>Members:</strong>
-    <%= team.members %>
-  </p>
-
-  <p>
-    <strong>Team lead:</strong>
+    <br>
+    <br>
+    <strong>Team Lead:</strong>
     <%= team.team_lead %>
-  </p>
-
-</div>
+    <br>
+    <br>
+    <strong>Members</strong>
+    <br>
+    <table class="table " style="width:400px">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <% for m in Employee.where(team_id:team.id)%>
+      <td><%= m.id %><td>
+      <%= m.name %>
+      <td><button class="btn btn-dark"><%= link_to "Show this employee", employee_url %></button></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+    

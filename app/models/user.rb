@@ -7,4 +7,9 @@ class User < ApplicationRecord
 
      # validation
      # validates :name, presence: true
+     after_create :send_welcome_email   
+     private    
+     def send_welcome_email      
+          UserMailer.send_welcome_email(self).deliver    
+     end 
 end

@@ -22,9 +22,12 @@
   </div>
 
   <div>
-    <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :members, style: "display: block" %>
-    <%= form.select(:members, options_for_select(all_emp), include_blank: true) %>
+    <% all_emp = Employee.all %>
+    <% all_emp.each do |emp| %>
+    <%= check_box_tag 'emp_ids[]', emp-%>
+    <%= h emp.name -%>
+    <%end%>
   </div>
 
   <div>

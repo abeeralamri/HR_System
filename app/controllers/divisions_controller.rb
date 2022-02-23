@@ -52,6 +52,10 @@ class DivisionsController < ApplicationController
   def destroy
     @division.destroy
 
+    # when the division destroyed, the team will be destroyed 
+    team = Team.find_by(id: @division.team)
+    team.destroy
+    
     respond_to do |format|
       format.html { redirect_to divisions_url, notice: "Division was successfully destroyed." }
       format.json { head :no_content }

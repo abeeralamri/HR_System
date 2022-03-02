@@ -11,7 +11,6 @@
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -22,7 +21,6 @@
         <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
         <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_user_path(user) %></button>  </td>
         <td><%= button_to "Delete", user, method: :delete, class: "btn btn-danger"%></td>
         <td><button class =  "btn btn-primary"><%= link_to "Show", user, style: "color:white;" %></button>  </td>

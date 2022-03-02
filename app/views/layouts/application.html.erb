@@ -25,9 +25,12 @@
   <%end%>
 </nav>
 
-  <body>
+  <body>   
+  <% if alert %>
+    <p div class="alert alert-danger mt-4" role="alert"><%= alert %></p> 
+  <%end%>
+    <p class="notice"><%= t notice %></p>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
   </body>
 </html>

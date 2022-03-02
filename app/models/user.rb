@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
      # validation
-     # validates :name, presence: true
+     validates :name, presence: true
      after_create :send_welcome_email   
      private    
      def send_welcome_email      

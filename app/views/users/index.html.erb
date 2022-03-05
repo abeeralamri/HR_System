@@ -1,14 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Users</h1>
+<%= link_to "New user", new_user_path , style: "color: black;"%>
 
 <div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+ <table class="table ">
+  <thead>
+    <tr>
+    
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+      <%emp = Employee.all%>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.password %></td>
+        <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_user_path(user) %></button>  </td>
+        <td><%= button_to "Delete", user, method: :delete, class: "btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
 
-<%= link_to "New user", new_user_path %>

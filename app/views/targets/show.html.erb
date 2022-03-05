@@ -3,8 +3,6 @@
 <%= render @target %>
 
 <div>
-  <%= link_to "Edit this target", edit_target_path(@target) %> |
-  <%= link_to "Back to targets", targets_path %>
+   <%= link_to "Back to targets", targets_path,  style: "color:black" %>
 
-  <%= button_to "Destroy this target", @target, method: :delete %>
 </div>

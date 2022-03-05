@@ -4,6 +4,7 @@ class EmployeesController < ApplicationController
   # GET /employees or /employees.json
   def index
     @employees = Employee.all
+    @teams = Team.all
   end
 
   # GET /employees/1 or /employees/1.json
@@ -25,7 +26,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to employee_url(@employee), notice: "Employee was successfully created." }
+        format.html { redirect_to "/employees", notice: "Employee was successfully created." }
         format.json { render :show, status: :created, location: @employee }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class EmployeesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.require(:employee).permit(:name, :email, :job, :salary, :e_team, :employee_status)
+      params.require(:employee).permit(:name, :email, :job, :salary, :employee_status, :team_id, :division_id)
     end
 end

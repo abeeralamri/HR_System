@@ -32,8 +32,8 @@
   </div>
 
   <div>
-    <%= form.label :t_team, style: "display: block" %>
-    <%= form.text_field :t_team %>
+    <%= form.label :team_id, style: "display: block" %>
+    <%= form.collection_select :team_id, Team.all, :id, :name, include_blank: true %>
   </div>
 
   <div>

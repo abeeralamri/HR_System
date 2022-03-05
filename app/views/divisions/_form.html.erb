@@ -21,14 +21,17 @@
     <%= form.text_area :description %>
   </div>
 
-  <div>
-    <%= form.label :d_team, style: "display: block" %>
-    <%= form.text_field :d_team %>
+   <div>
+   
+    <%= form.label :team, style: "display: block" %>
+    <%= form.collection_select :team, Team.all, :id, :name, include_blank: true %>
+
   </div>
 
   <div>
+     <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :manager, style: "display: block" %>
-    <%= form.text_field :manager %>
+    <%= form.select(:manager, options_for_select(all_emp), include_blank: true) %>
   </div>
 
   <div>

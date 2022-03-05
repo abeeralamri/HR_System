@@ -1,0 +1,40 @@
+<%= form_with(model: division) do |form| %>
+  <% if division.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(division.errors.count, "error") %> prohibited this division from being saved:</h2>
+
+      <ul>
+        <% division.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+   <div>
+   
+    <%= form.label :team, style: "display: block" %>
+    <%= form.collection_select :team, Team.all, :id, :name, include_blank: true %>
+
+  </div>
+
+  <div>
+     <% all_emp = Employee.all.map { |e| [e.name] } %>
+    <%= form.label :manager, style: "display: block" %>
+    <%= form.select(:manager, options_for_select(all_emp), include_blank: true) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

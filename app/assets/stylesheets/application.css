@@ -6,10 +6,66 @@
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * compiled fil e so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  */
+
+
+
+ html{
+    background-color:  #3e515e !important; 
+    font-family: "Work Sans";
+    color: #ffffff !important;
+}
+
+body {
+    margin: 30px !important;
+    color: #e2e2e2 !important;
+    background-color:  #3e515e !important; 
+
+}
+
+body .navbar{
+    color: #7a2121 !important;
+    margin: -30px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    background-color:  #212b31 !important; 
+}
+body a.navbar-home {
+    text-decoration: none !important;
+    color: rgb(255, 255, 255);
+    margin-right: 930px;
+}
+body span.navbar-brand {
+    color: #c0c0c0 !important;
+
+}
+body .home{
+    margin-right: 85%;
+    background-color: none;
+    color: #f3f1f1 !important;
+    
+
+}
+body .card{
+    margin-top: 100px;
+    margin: 30px;
+    background-color:  #34393f ; 
+    height: 120px;
+}
+
+.cards{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+table{
+    height: 300px;
+}

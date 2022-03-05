@@ -1,21 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Employees</h1>
-<%= link_to "New employee", new_employee_path, style: "color: black;" %>
+<h1><%= t "Employees"%></h1>
+<%= link_to t( "New employee"), new_employee_path, style: "color: black;" %>
 
 <div id="employees">
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Job</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Employment_status</th>
-      <th scope="col">Team</th>
-      <th scope="col">Division</th>
-      <th scope="col" >Action  </th>
+      <th scope="col"><%= t "ID" , default: "ID"%></th>
+      <th scope="col"><%= t "Name" , default: "Name"%></th>
+      <th scope="col"><%= t "Email", default: "Email"%></th>
+      <th scope="col"><%= t "Job", default: "Job"%></th>
+      <th scope="col"><%= t "Salary" , default: "Salary"%></th>
+      <th scope="col"><%= t "Employment_status", default: "Employment_status"%> </th>
+      <th scope="col"><%= t "Team", default: "Team"%></th>
+      <th scope="col"><%= t "Division", default: "Division"%></th>
+      <th scope="col" ><%= t "Action" , default: "Action"%> </th>
     </tr>
   </thead>
   <tbody>
@@ -42,8 +42,8 @@
           <%end%>
         </td>
         
-        <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_employee_path(employee) %></button> </td>
-        <td> <%= button_to "Delete", employee, method: :delete, class: "btn btn-danger"%></td>     
+        <td><button class =  "btn btn-dark"><%= link_to t("Edit"), edit_employee_path(employee) %></button> </td>
+        <td> <%= button_to t("Delete"), employee, method: :delete, class: "btn btn-danger"%></td>     
       </tr>
     <% end %>
   </tbody>

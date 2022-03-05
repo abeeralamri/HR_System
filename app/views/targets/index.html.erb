@@ -1,19 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green"><%= t notice %></p>
 
-<h1>Targets</h1>
-<%= link_to "New target", new_target_path, style: "color: black;" %>
+<h1><%=t "Targets"%></h1>
+<%= link_to t("New target"), new_target_path, style: "color: black;" %>
 
 <div id="targets">
   <table class="table ">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Start Date</th>
-      <th scope="col">Finish Date</th>
-      <th scope="col">Team</th>
-      <th scope="col">Status</th>
-      <th scope="col">Action</th>
+      <th scope="col"><%= t "Name"%></th>
+      <th scope="col"><%= t "Description"%></th>
+      <th scope="col"><%= t "Start Date"%></th>
+      <th scope="col"><%= t "Finish Date"%></th>
+      <th scope="col"><%= t "Team"%></th>
+      <th scope="col"><%= t "Status"%></th>
+      <th scope="col"><%= t "Action"%></th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +29,8 @@
               <%= Team.find_by(id: target.team_id).name %> 
           <%end%></td>
         <td><%= target.status %></td>
-        <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_target_path(target) %> </td>
-        <td></button> <%= button_to "Delete", target, method: :delete, class: "btn btn-danger"%></td>
+        <td><button class =  "btn btn-dark"><%= link_to t("Edit"), edit_target_path(target) %> </td>
+        <td></button> <%= button_to t("Delete"), target, method: :delete, class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>

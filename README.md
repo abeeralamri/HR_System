@@ -37,7 +37,15 @@ mailhog
 
 Open your browser at "localhost:3000".
 
-
 ## Screenshots
 ### Send a welcome email for new registers
 ![user](https://user-images.githubusercontent.com/48870279/155396026-a2d3d7e6-b77a-4ee6-abb5-5562f54c9db8.png)
+
+### Support Arabic and English languages
+
+- Arabic
+![ar](https://user-images.githubusercontent.com/48870279/156898441-b0c4007a-8a53-4de0-9396-1ef0547f04c9.png)
+
+- English
+![en](https://user-images.githubusercontent.com/48870279/156898513-066dd7e2-3729-498a-b81e-9c1a5e5ef681.png)
+

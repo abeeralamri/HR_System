@@ -1,0 +1,125 @@
+ar:
+  activerecord:
+    attributes: 
+      user: 
+        name: "اسم"
+        email: "البريد الالكتروني"
+        password: "الرقم السري"
+        Password confirmation: "تأكيد الرقم السري"
+
+      employee: 
+        name: "اسم"
+        email: "البريد الالكتروني"
+        job: "الوظيفة"
+        salary: "الراتب"
+        employee_status: "الحالة الوظيفية"
+        team_id: "الفريق"
+        division_id: "القسم"
+
+      team:
+        name: "اسم"
+        description: "الوصف"
+        members: "الاعضاء"
+        team_lead: "قائد الفريق"
+        division_id: "القسم"
+
+      target:
+        title: "العنوان"
+        description: "الوصف"
+        start_date: "تاريخ البداية"
+        finish_date: "تاريخ النهاية"
+        status: "الحالة"
+        team_id: "الفريق"        
+
+
+      division:
+        name: "اسم"
+        description: "الوصف"
+        team: "الفريق"
+        manager: "المدير"
+
+  create: ".تم بنجاح"
+  update:  ".تم التعديل بنجاح"
+  destroy: "تم حذف بنجاح"
+  Editing: "تعديل "
+  devise:
+      failure: 
+        user:
+          unauthenticated: "يوجد خطأ"
+            
+
+
+  Sign up: "تسجيل"
+  Log in: "تسجيل دخول"
+  Log out: "تسجيل خروج"
+  Forgot your password?: "نسيت كلمة المرور؟"
+  Password confirmation: "تأكيد الرقم السري"
+  Remember me: "ذكرني"
+  characters minimum: "أحرف كحد ادنى"
+  6: "٦"
+
+  #User
+  Users: "المستخدمين"
+  ID: "الهوية الشخصية"
+  Name: "الاسم"
+  Email: "البريد الالكتروني"
+  Action: "الروابط"
+  Back to users: "الرجوع الى جميع المستخدمين"
+  Edit: "تعديل"
+  Delete: "حذف"
+  Show: "عرض"
+  New user: "مستخدم جديد"
+  Create user: "إنشاء مستخدم"
+  Profile pic: "صورة الحساب"
+  Home: "الرئسية"
+
+  globals:
+    forms:
+      messages: 
+        errors:
+          one error: "يوجد خطأ"
+          multiple errors: "%{count} يوجد عديد من الأخطاء يجب حلها"
+
+  #Emp 
+  Employees: "الموظيفين"
+  Job: "الوظيفة"
+  Salary: "الراتب"
+  Employment_status: "الحالة الوظيفية"
+  Team: "الفريق"
+  Division: "القسم"
+  New employee: "موظف جديد"
+  Create Employee: "إنشاء موظف"
+  Back To Employees: "الرجوع الى جميع الموظفين"
+
+  #Team
+  Create Team: "إنشاء فريق"
+  Description: "الوصف"
+  Team lead: "قائد الفريق"
+  Teams: "الفرق"
+  New team: "فريق جديد"
+  Members: "الاعضاء"
+  Back to teams: "الرجوع لجميع الفرق"
+
+  #Target
+  Targets: "الاهداف"  
+  New target: "هدف جديد"
+  Create Target: "إنشاء الهدف"
+  Back to targets: "الرجوع لجميع الاهداف"
+  Start Date: "تاريخ البداية"
+  Finish Date: "تاريخ النهاية"
+  Status: "الحالة"
+  Back to targets: "الرجوع لجميع الاقسام"
+
+  #Division
+  Manager: "مدير"
+  Title: "العنوان"
+  Start date: "تاريخ البداية"
+  Finish date: "تاريخ النهاية"
+  Status: "الحالة"
+  New division: "قسم جديد"
+  Divisions: "الاقسام"
+  Create division: "انشاء قسم"
+  Back to divisions: "الرجوع لجميع الاقسام"
+
+
+

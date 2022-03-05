@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green"><%= t notice %></p>
 <p>
 <% if @user.profile_pic.attached? %>
   <%= image_tag(@user.profile_pic, size: "200x200") %>
@@ -7,6 +7,6 @@
 <%= render @user %>
 
 <div>
-    <%= link_to "Back to users", users_path,  style: "color:black" %>
+    <%= link_to t("Back to users"), users_path,  style: "color:black" %>
 
 </div>

@@ -1,33 +1,132 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes: 
+      user: 
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        Password confirmation: "Password confirmation"
+
+      employee: 
+        name: "Name"
+        email: "Email"
+        job: "Job"
+        salary: "Salary"
+        employee_status: "Employee status"
+        team_id: "Team"
+        division_id: "Division"
+
+      team:
+        name: "Name"
+        description: "Description"
+        members: "Members"
+        team_lead: "Team lead"
+        division_id: "Division"
+
+      target:
+        title: "Title"
+        description: "Description"
+        start_date: "Start Date"
+        finish_date: "Finish Date"
+        status: "Status"
+        team_id: "Team"        
+
+
+      division:
+        name: "Name"
+        description: "Description"
+        team: "Team"
+        manager: "Manager"
+
+  devise:
+      failure: 
+        user:
+          unauthenticated: "Something error"
+            
+
+
+  Sign up: "Sign up"
+  Log in: "Log in"
+  Forgot your password?: "Forgot your password?"
+  Password confirmation: "Password confirmation"
+  Remember me: "Remember me"
+  characters minimum: "characters minimum"
+  6: "6"
+  Users: "Users"
+  ID: "ID"
+  Name: "Name"
+  Email: "Email"
+  Action: "Action"
+
+  #User
+  Users: "Users"
+  ID: "ID"
+  Name: "Name"
+  Email: "Email"
+  Action: "Action"
+  Back to users: "Back to users"
+  Edit: "Edit"
+  Delete: "Delete"
+  Show: "Show"
+  New user: "New user"
+  Create user: "Create user"
+  Profile pic: "Profile picture"
+  Home: "Home"
+
+  globals:
+    forms:
+      messages: 
+        errors:
+          one error: "There is an error"
+          multiple errors: "%{count} errors "
+
+  #Emp 
+  Employees: "Employee"
+  Job: "Job"
+  Salary: "Salary"
+  Employment_status: " Employment status"
+  Team: "Tema"
+  Division: "Division"
+  New employee: " New Employee"
+  Create Employee: " Create Employee"
+  Back To Employees: "Back to employees"
+
+  #Team
+  Create Team: " Create team"
+  Description: "Description"
+  Team lead: "Team Lead"
+  Teams: "Team"
+  New team: "New team"
+  Members: "Memebrs"
+  Back to teams: "Back to teams"
+
+  #Target
+  Targets: "Target"  
+  New target: "New target"
+  Create Target: " Create target"
+  Back to targets: "Back to target"
+  Start Date: "Start Date"
+  Finish Date: " Finish Date"
+  Status: "Status"
+  Back to targets: "Back to targets"
+
+  #Division
+  Manager: "Manager"
+  Title: "Title"
+  Start date: "Start Date"
+  Finish date: "Finish Date"
+  Status: "Status"
+  New division: "New division"
+  Divisions: "Divisions"
+  Create division: " Create division"
+  Back to divisions: "Back to divisions"
+
+
+  create: "Successfully create"
+  update:  "Successfully updated"
+  destroy: " Successfully destroyed "
+
+
+
+  
+  

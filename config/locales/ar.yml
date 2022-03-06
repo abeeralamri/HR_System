@@ -46,9 +46,13 @@ ar:
       failure: 
         user:
           unauthenticated: "يوجد خطأ"
-            
+      sessions:
+        signed_in: "تم تسجيل الدخول بنجاح"
+        signed_out: "تم تسجيل الخروج بنجاح"
+        already_signed_out: "تم تسجيل الخروج بنجاح"
+              
 
-
+  
   Sign up: "تسجيل"
   Log in: "تسجيل دخول"
   Log out: "تسجيل خروج"
@@ -57,6 +61,9 @@ ar:
   Remember me: "ذكرني"
   characters minimum: "أحرف كحد ادنى"
   6: "٦"
+  Sign in count: "عددد مرات تسجيل الدخول"
+  Current sign in: "تاريخ تسجيل الدخول"
+  Last sign in: "تاريخ آخر تسجيل دخول"
 
   #User
   Users: "المستخدمين"

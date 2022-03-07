@@ -79,6 +79,7 @@ ar:
   Create user: "إنشاء مستخدم"
   Profile pic: "صورة الحساب"
   Home: "الرئسية"
+  Editing user: "تعديل المستخدم"
 
   globals:
     forms:
@@ -97,6 +98,7 @@ ar:
   New employee: "موظف جديد"
   Create Employee: "إنشاء موظف"
   Back To Employees: "الرجوع الى جميع الموظفين"
+  Editing employee: "تعديل الموظف"
 
   #Team
   Create Team: "إنشاء فريق"
@@ -106,7 +108,7 @@ ar:
   New team: "فريق جديد"
   Members: "الاعضاء"
   Back to teams: "الرجوع لجميع الفرق"
-
+  Editing team: "تعديل الفريق"
   #Target
   Targets: "الاهداف"  
   New target: "هدف جديد"
@@ -116,6 +118,7 @@ ar:
   Finish Date: "تاريخ النهاية"
   Status: "الحالة"
   Back to targets: "الرجوع لجميع الاقسام"
+  Editing target: "تعديل الهدف"
 
   #Division
   Manager: "مدير"
@@ -127,6 +130,7 @@ ar:
   Divisions: "الاقسام"
   Create division: "انشاء قسم"
   Back to divisions: "الرجوع لجميع الاقسام"
+  Editing division: "تعديل القسم"
 
 
 

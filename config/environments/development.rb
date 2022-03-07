@@ -70,7 +70,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.i18n.available_locales = [:en, :ar]
-  config.i18n.default_locale = :ar
+  config.i18n.default_locale = :en
 
   Rails.application.configure do
     config.action_mailer.perform_deliveries = true

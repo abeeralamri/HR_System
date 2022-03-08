@@ -39,14 +39,20 @@ body .navbar{
 body a.navbar-home {
     text-decoration: none !important;
     color: rgb(255, 255, 255);
-    margin-right: 930px;
+    margin-right: 720px;
+}
+.buttons{
+    display: flex;
+    margin: 10px;
+    
 }
 body span.navbar-brand {
     color: #c0c0c0 !important;
 
+
 }
 body .home{
-    margin-right: 85%;
+    /* margin-right: 85%; */
     background-color: none;
     color: #f3f1f1 !important;
     
@@ -68,4 +74,8 @@ body .card{
 }
 table{
     height: 300px;
+}
+
+.translate{
+    font-size: 20px;
 }

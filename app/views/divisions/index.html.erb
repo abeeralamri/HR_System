@@ -1,19 +1,20 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Divisions</h1>
-<%= link_to "New division", new_division_path, style: "color: black;" %>
+<h2><%= t "Divisions"%></h2>
+<%= link_to t("New division"), new_division_path, style: "color: black;" %>
 
 <div id="divisions">
  
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Team</th>
-      <th scope="col">Manager</th>
-      <th scope="col">Description</th>
-      <th scope="col">Action</th>
+    
+      <th scope="col"><%= t "ID"%></th>
+      <th scope="col"><%= t "Name"%></th>
+      <th scope="col"><%= t "Team"%></th>
+      <th scope="col"><%= t "Manager"%></th>
+      <th scope="col"><%= t "Description"%></th>
+      <th scope="col"><%= t "Action"%></th>
+
     </tr>
   </thead>
   <tbody>

@@ -1,19 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<h2> <%= t "Users", default: "Users"%> </h2>
 
-<h1>Users</h1>
-<%= link_to "New user", new_user_path , style: "color: black;"%>
+<%= link_to t("New user"), new_user_path, style:"color:black"%>
 
 <div id="users">
  <table class="table ">
   <thead>
     <tr>
-    
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Password</th>
-      <th scope="col">Action</th>
+      <th scope="col"><%= t("ID")%></th>
+      <th scope="col"><%= t("Name")%></th>
+      <th scope="col"><%= t("Email")%></th>
+      <th scope="col"><%= t("Sign in count")%></th>
+      <th scope="col"><%= t("Current sign in")%></th>
+      <th scope="col"><%= t("Last sign in")%></th>
+      <th scope="col"><%= t("Action")%></th>
     </tr>
+
   </thead>
   <tbody>
     <% @users.each do |user| %>
@@ -22,9 +23,15 @@
         <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_user_path(user) %></button>  </td>
-        <td><%= button_to "Delete", user, method: :delete, class: "btn btn-danger"%></td>
+        <td><%= user.sign_in_count %></td>
+        <td><%= user.current_sign_in_at.to_s %></td>
+        <td><%= user.last_sign_in_at.to_s %></td>
+        
+
+        <td><button class =  "btn btn-dark"><%= link_to t("Edit"), edit_user_path(user) %></button>  </td>
+        <td><%= button_to t("Delete"), user, method: :delete, class: "btn btn-danger"%></td>
+        <td><button class =  "btn btn-primary"><%= link_to t("Show"), user, style: "color:white;" %></button>  </td>
+
       </tr>
     <% end %>
   </tbody>

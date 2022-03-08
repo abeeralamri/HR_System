@@ -1,22 +1,42 @@
-<div id="<%= dom_id team %>">
-  <p>
-    <strong>Name:</strong>
+
+    <strong><%= t "Name"%>:</strong>
     <%= team.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
+    <br>
+    <br>
+    <strong><%= t "Description"%>:</strong>
     <%= team.description %>
-  </p>
-
-  <p>
-    <strong>Members:</strong>
-    <%= team.members %>
-  </p>
-
-  <p>
-    <strong>Team lead:</strong>
+    <br>
+    <br>
+    <strong><%= t "Team lead"%>:</strong>
     <%= team.team_lead %>
-  </p>
+    <br>
+    <br>
+    <strong><%= t "Members"%></strong>
+    <br>
+    <table class="table " style="width:400px">
+    <thead>
+      <tr>
+        <th scope="col"><%=t "ID"%></th>
+        <th scope="col"><%= t "Name"%></th>
+        <th scope="col"><%= t "Action"%></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <% for m in Employee.where(team_id:team.id)%>
+      <td><%= m.id %><td>
+      <%= m.name  %>
+      <td><button class="btn btn-dark"><%= link_to t("Show"), employee_url(m.id) %></button></td>
+    </tr>
+    <% end %>
+    <tr>
+    <% for emp in Employee.where(name:team.members) %>
+      <td><%= emp.id %><td>
+      <%= team.members %>
+      <td><button class="btn btn-dark"><%= link_to t("Show"), employee_url(emp.id) %></button></td>
+    </tr>
+    <%end%>
 
-</div>
+    </tbody>
+  </table>
+    

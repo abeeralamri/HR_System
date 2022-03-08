@@ -1,18 +1,16 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Teams</h1>
-<%= link_to "New team", new_team_path , style: "color: black;" %>
+<h2><%= t "Teams" %></h2>
+<%= link_to t("New team"), new_team_path , style: "color: black;" %>
 
 <div id="teams">
   <table class="table ">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Members</th>
-      <th scope="col">Description</th>
-      <th scope="col">Team lead</th>
-      <th scope="col">Action</th>
+      <th scope="col"><%= t "ID"%></th>
+      <th scope="col"><%= t "Name"%></th>
+      <th scope="col"><%= t "Description"%></th>
+      <th scope="col"><%= t "Team lead"%></th>
+      <th scope="col"><%= t "Action"%></th>
     </tr>
   </thead>
   <tbody>
@@ -20,16 +18,12 @@
       <tr>
         <td><%= team.id %></td>
         <td><%= team.name %></td>
-        <td>
-          <% for m in Employee.where(team_id:team.id)%>
-            <%= m.name %>
-            <br>
-          <%end%>
-        </td>
         <td><%= team.description %></td>
         <td><%= team.team_lead  %></td>
-        <td><button class =  "btn btn-dark"><%= link_to "Edit", edit_team_path(team) %></button>  </td>
-        <td><%= button_to "Delete", team, method: :delete, class: "btn btn-danger"%></td>
+        <td><button class =  "btn btn-dark"><%= link_to t("Edit"), edit_team_path(team) %></button>  </td>
+        <td><%= button_to t("Delete"), team, method: :delete, class: "btn btn-danger"%></td>
+        <td><button class =  "btn btn-primary"><%= link_to t("Show"), team, style: "color:white;" %></button>  </td>
+
       </tr>
     <% end %>
   </tbody>

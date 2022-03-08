@@ -10,45 +10,45 @@
     </div>
   <% end %>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-3">
     <%= form.label :job, style: "display: block" %>
-    <%= form.text_field :job %>
+    <%= form.text_field :job, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-3">
     <%= form.label :salary, style: "display: block" %>
-    <%= form.text_field :salary %>
+    <%= form.text_field :salary, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-3">
    
     <%= form.label :team_id, style: "display: block" %>
-    <%= form.collection_select :team_id, Team.all, :id, :name, include_blank: true %>
+    <%= form.collection_select :team_id, Team.all, :id, :name, include_blank: true, class: "form-control" %>
 
   </div>
   
-  <div>
+  <div class = "mb-3">
     <%= form.label :division_id, style: "display: block" %>
-    <%= form.collection_select :division_id, Division.all, :id, :name, include_blank: true %>
+    <%= form.collection_select :division_id, Division.all, :id, :name, include_blank: true, class: "form-control"%>
   </div>
 
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :employee_status, style: "display: block" %>
-    <%= form.text_field :employee_status %>
+    <%= form.text_field :employee_status, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit t("Create Employee")%>
+  <div class = "mb-1">
+    <%= form.submit t("Create Employee"), class: "btn btn-primary"%>
   </div>
 <% end %>

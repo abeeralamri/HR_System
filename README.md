@@ -49,3 +49,7 @@ Open your browser at "localhost:3000".
 - English
 ![en](https://user-images.githubusercontent.com/48870279/156898513-066dd7e2-3729-498a-b81e-9c1a5e5ef681.png)
 
+### Vedio record
+![](https://user-images.githubusercontent.com/48870279/157339036-53801a1b-89c7-43fd-bfaa-5152c24581e7.mov
+)
+

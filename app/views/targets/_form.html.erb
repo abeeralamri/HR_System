@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :start_date, style: "display: block" %>
-    <%= form.date_field :start_date %>
+    <%= form.date_field :start_date, class: "form-control" %>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :finish_date, style: "display: block" %>
-    <%= form.date_field :finish_date %>
+    <%= form.date_field :finish_date, class: "form-control"%>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :team_id, style: "display: block" %>
     <%= form.collection_select :team_id, Team.all, :id, :name, include_blank: true %>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
+    <%= form.text_field :status, class: "form-control"%>
   </div>
 
-  <div>
-    <%= form.submit t("Create Target")%>
+  <div class = "mb-1">
+    <%= form.submit t("Create Target"), class: "btn btn-primary"%>
   </div>
 <% end %>

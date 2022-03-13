@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control"%>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div>
-    <div>
+  <div class = "mb-1">
+    <div class = "mb-1">
    <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :members, style: "display: block" %>
-    <%= form.select(:members, options_for_select(all_emp), include_blank: true) %>
+    <%= form.select(:members, options_for_select(all_emp), include_blank: true)%>
   </div>
   </div>
 
-  <div>
+  <div class = "mb-1">
     <% all_emp = Employee.all.map { |e| [e.name] } %>
     <%= form.label :team_lead, style: "display: block" %>
     <%= form.select(:team_lead, options_for_select(all_emp), include_blank: true) %>
   </div>
 
-   <div>
+   <div class = "mb-1">
    
     <%= form.label :division_id, style: "display: block" %>
         <%= form.collection_select :division_id, Division.all, :id, :name, include_blank: true %>
   </div>
 
-  <div>
-    <%= form.submit t("Create Team") %>
+  <div class = "mb-1">
+    <%= form.submit t("Create Team"), class: "btn btn-primary" %>
   </div>
 <% end %>

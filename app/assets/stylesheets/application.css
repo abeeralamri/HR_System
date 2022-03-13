@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+ body a{
+    text-decoration: none;
+}
 
  html{
     background-color:  #3e515e !important; 

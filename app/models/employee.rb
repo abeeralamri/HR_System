@@ -1,6 +1,6 @@
 class Employee < ApplicationRecord
     belongs_to :team, optional: true
-    belongs_to :division, optional: true
+    has_one :division, dependent: :nullify
 
     # validation
     validates :email, presence: true, format: {with:/[a-z]+@.+\.\S+\z/}, uniqueness: true

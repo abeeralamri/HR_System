@@ -1,5 +1,5 @@
 class Target < ApplicationRecord
-    has_one :team 
+    belongs_to :team, optional: true
     
      # validation
     validates :title, presence: true, length: {minimum: 3}

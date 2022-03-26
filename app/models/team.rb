@@ -1,7 +1,7 @@
 class Team < ApplicationRecord
     has_many :employees, dependent: :nullify
-    has_many :targets, dependent: :destroy
-    has_one :division
+    has_many :targets, dependent: :nullify
+    belongs_to :division,  optional: true
 
     # validation
     validates :name, length: {minimum: 3}
